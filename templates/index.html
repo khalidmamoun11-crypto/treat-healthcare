@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treat International | ترِيت إنترناشونال</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="arabic">
+
+<div id="preloader"><div class="loader-heart"><i class="fa-solid fa-heart-pulse"></i></div></div>
+<div id="scrollProgress"></div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar">
+    <div class="container nav-wrapper">
+        <a href="#home" class="logo">
+            <div class="logo-icon">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Treat Logo"
+                     onerror="this.remove()">
+                <i class="fa-solid fa-heart-pulse logo-fallback"></i>
+            </div>
+            <div class="logo-text">
+                <span class="ar">ترِيت إنترناشونال</span><span class="en">TREAT INTERNATIONAL</span>
+                <strong><span class="ar">حلول الرعاية الصحية</span><span class="en">HEALTHCARE SOLUTIONS</span></strong>
+            </div>
+        </a>
+
+        <div class="desktop-nav">
+            <a href="#home" class="nav-link active"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+            <a href="#about" class="nav-link"><span class="ar">من نحن</span><span class="en">About</span></a>
+            <a href="#solutions" class="nav-link"><span class="ar">خدماتنا</span><span class="en">Services</span></a>
+            <a href="#network" class="nav-link"><span class="ar">شبكتنا</span><span class="en">Network</span></a>
+            <a href="#pricing" class="nav-link"><span class="ar">البطاقات</span><span class="en">Cards</span></a>
+            <a href="#partners" class="nav-link"><span class="ar">شركاؤنا</span><span class="en">Partners</span></a>
+            <a href="#contact" class="nav-contact"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></a>
+        </div>
+
+        <div class="nav-actions">
+            <button id="languageToggle" class="language-btn">
+                <i class="fa-solid fa-globe"></i>
+                <span class="ar">EN</span><span class="en">عربي</span>
+            </button>
+            <button id="mobileMenuButton" class="mobile-menu-button"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#home"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+        <a href="#about"><span class="ar">من نحن</span><span class="en">About</span></a>
+        <a href="#solutions"><span class="ar">خدماتنا</span><span class="en">Services</span></a>
+        <a href="#network"><span class="ar">شبكتنا</span><span class="en">Network</span></a>
+        <a href="#pricing"><span class="ar">البطاقات</span><span class="en">Cards</span></a>
+        <a href="#partners"><span class="ar">شركاؤنا</span><span class="en">Partners</span></a>
+        <a href="#tourism"><span class="ar">السياحة العلاجية</span><span class="en">Medical Tourism</span></a>
+        <a href="#digital"><span class="ar">الحلول الرقمية</span><span class="en">Digital Solutions</span></a>
+        <a href="#contact"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></a>
+    </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero-new" id="home">
+    <div class="hero-background">
+        <video class="hero-video" autoplay muted loop playsinline
+               poster="{{ url_for('static', filename='images/hero-poster.jpg') }}">
+            <source src="{{ url_for('static', filename='videos/healthcare.mp4') }}" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+        <div class="hero-content">
+            <span class="hero-tag"><span class="ar">رعايتك… بلا حدود</span><span class="en">YOUR CARE… WITHOUT BORDERS</span></span>
+            <h1>
+                <span class="ar">صحتك أمانة<br><strong>ونحن نحرسها</strong></span>
+                <span class="en">Your Health Is a Trust<br><strong>We Protect It</strong></span>
+            </h1>
+            <p>
+                <span class="ar">منصة متكاملة للسياحة العلاجية والحلول الرقمية الصحية — نرافقك من أول استشارة حتى التعافي الكامل.</span>
+                <span class="en">An integrated platform for medical tourism and digital health solutions — from first consultation to full recovery.</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#solutions" class="primary-button">
+                    <span class="ar">اكتشف خدماتنا</span><span class="en">Explore Services</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a href="#contact" class="secondary-button">
+                    <span class="ar">استشارة مجانية</span><span class="en">Free Consultation</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-stats">
+        <div class="container hero-stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-count="15">0</span><strong>+</strong>
+                <small><span class="ar">دولة حول العالم</span><span class="en">Countries Worldwide</span></small>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="50">0</span><strong>+</strong>
+                <small><span class="ar">مستشفى شريك</span><span class="en">Partner Hospitals</span></small>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="200">0</span><strong>+</strong>
+                <small><span class="ar">طبيب معتمد</span><span class="en">Certified Doctors</span></small>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="1000">0</span><strong>+</strong>
+                <small><span class="ar">حالة تمت خدمتها</span><span class="en">Cases Served</span></small>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about-new" id="about">
+    <div class="container about-grid">
+        <div class="about-text reveal">
+            <span class="section-tag"><span class="ar">من نحن</span><span class="en">ABOUT US</span></span>
+            <h2>
+                <span class="ar">جسر الثقة بينك وبين <strong>أفضل الرعاية الطبية</strong></span>
+                <span class="en">Your Bridge of Trust to the <strong>Best Medical Care</strong></span>
+            </h2>
+            <p>
+                <span class="ar">في ترِيت إنترناشونال، نؤمن أن العلاج ليس مجرد رحلة طبية، بل تجربة إنسانية متكاملة. نجمع بين الخبرة الطبية والتقنية الحديثة لنساعدك على الوصول للعلاج المناسب في الوقت المناسب وبأفضل تكلفة.</span>
+                <span class="en">At Treat International, treatment is more than a medical journey — it's a complete human experience. We combine medical expertise with modern technology to get you the right treatment, at the right time, at the best cost.</span>
+            </p>
+            <div class="about-features">
+                <div><i class="fa-solid fa-shield-halved"></i><span class="ar">معايير جودة عالمية</span><span class="en">Global Quality Standards</span></div>
+                <div><i class="fa-solid fa-hand-holding-medical"></i><span class="ar">مرافقة كاملة للحالة</span><span class="en">Full Case Support</span></div>
+                <div><i class="fa-solid fa-globe"></i><span class="ar">شبكة عالمية موثوقة</span><span class="en">Trusted Global Network</span></div>
+                <div><i class="fa-solid fa-clock-rotate-left"></i><span class="ar">استجابة سريعة 24/7</span><span class="en">Fast 24/7 Response</span></div>
+            </div>
+        </div>
+        <div class="about-image reveal">
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="About Treat International"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('about-image-fallback');">
+            <div class="about-image-overlay">
+                <span>+10</span>
+                <small><span class="ar">سنوات خبرة</span><span class="en">Years of Experience</span></small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SOLUTIONS ============ -->
+<section class="section" id="solutions">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag"><span class="ar">خدماتنا</span><span class="en">OUR SERVICES</span></span>
+            <h2><span class="ar">حلول صحية <strong>متكاملة</strong></span><span class="en">Complete <strong>Healthcare Solutions</strong></span></h2>
+        </div>
+        <div class="solutions-grid">
+            <div class="solution-card-new">
+                <div class="solution-icon-new"><i class="fa-solid fa-plane-departure"></i></div>
+                <h3><span class="ar">السياحة العلاجية</span><span class="en">Medical Tourism</span></h3>
+                <p><span class="ar">تنظيم كامل لرحلات العلاج لأفضل المستشفيات العالمية.</span><span class="en">Complete treatment trips to top global hospitals.</span></p>
+                <a href="#tourism" class="card-link-new"><span class="ar">اعرف المزيد</span><span class="en">Learn More</span> <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="solution-card-new">
+                <div class="solution-icon-new"><i class="fa-solid fa-laptop-medical"></i></div>
+                <h3><span class="ar">الحلول الرقمية</span><span class="en">Digital Solutions</span></h3>
+                <p><span class="ar">استشارات عن بُعد وسجل طبي رقمي آمن ومتابعة ذكية.</span><span class="en">Telemedicine, secure records & smart follow-up.</span></p>
+                <a href="#digital" class="card-link-new"><span class="ar">اعرف المزيد</span><span class="en">Learn More</span> <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="solution-card-new">
+                <div class="solution-icon-new"><i class="fa-solid fa-id-card-clip"></i></div>
+                <h3><span class="ar">بطاقات الرعاية</span><span class="en">Care Cards</span></h3>
+                <p><span class="ar">بطاقات خصومات ورعاية VIP في تركيا ومصر والهند وروسيا.</span><span class="en">VIP discount cards in Turkey, Egypt, India & Russia.</span></p>
+                <a href="#pricing" class="card-link-new"><span class="ar">اطلب بطاقتك</span><span class="en">Get Your Card</span> <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="solution-card-new">
+                <div class="solution-icon-new"><i class="fa-solid fa-file-signature"></i></div>
+                <h3><span class="ar">اتفاقيات الشركات</span><span class="en">Corporate Agreements</span></h3>
+                <p><span class="ar">عقود رعاية صحية مرنة للأفراد والعائلات والشركات.</span><span class="en">Flexible healthcare contracts for individuals & families.</span></p>
+                <a href="#pricing" class="card-link-new"><span class="ar">اعرف المزيد</span><span class="en">Learn More</span> <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ NETWORK ============ -->
+<section class="section network-new" id="network">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag"><span class="ar">شبكتنا</span><span class="en">OUR NETWORK</span></span>
+            <h2><span class="ar">حضور <strong>عالمي</strong> موثوق</span><span class="en">A Trusted <strong>Global Presence</strong></span></h2>
+        </div>
+        <div class="network-grid-new">
+            <div class="network-card-new">
+                <div class="network-icon-new"><i class="fa-solid fa-flag"></i></div>
+                <h3><span class="ar">تركيا</span><span class="en">Turkey</span></h3>
+                <p><span class="ar">أكثر من 20 مستشفى معتمداً دولياً</span><span class="en">20+ internationally accredited hospitals</span></p>
+            </div>
+            <div class="network-card-new">
+                <div class="network-icon-new"><i class="fa-solid fa-flag"></i></div>
+                <h3><span class="ar">مصر</span><span class="en">Egypt</span></h3>
+                <p><span class="ar">شبكة عيادات وتحاليل واسعة</span><span class="en">Wide network of clinics & labs</span></p>
+            </div>
+            <div class="network-card-new">
+                <div class="network-icon-new"><i class="fa-solid fa-flag"></i></div>
+                <h3><span class="ar">الهند</span><span class="en">India</span></h3>
+                <p><span class="ar">مراكز متخصصة في الزراعة والقلب</span><span class="en">Specialized transplant & cardiac centers</span></p>
+            </div>
+            <div class="network-card-new">
+                <div class="network-icon-new"><i class="fa-solid fa-flag"></i></div>
+                <h3><span class="ar">روسيا</span><span class="en">Russia</span></h3>
+                <p><span class="ar">برامج تأهيل وعلاج متقدمة</span><span class="en">Advanced rehab & treatment programs</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section pricing-new" id="pricing">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag"><span class="ar">بطاقاتنا وخططنا</span><span class="en">OUR CARDS & PLANS</span></span>
+            <h2><span class="ar">اختر <strong>البطاقة المناسبة لك</strong></span><span class="en">Choose the <strong>Card That Fits You</strong></span></h2>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="pricing-card featured">
+                <div class="pricing-badge"><span class="ar">الأكثر طلباً</span><span class="en">MOST POPULAR</span></div>
+                <div class="pricing-icon"><i class="fa-solid fa-id-card-clip"></i></div>
+                <h3><span class="ar">بطاقة سند من ترِيت</span><span class="en">Treat Sanad Card</span></h3>
+                <p class="pricing-desc">
+                    <span class="ar">VIP — تركيا • مصر • الهند • روسيا</span>
+                    <span class="en">VIP — Turkey • Egypt • India • Russia</span>
+                </p>
+                <div class="pricing-price"><span class="currency">$</span><span class="amount">99</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-circle-check"></i><span class="ar">خصومات VIP على العلاج في 4 دول</span><span class="en">VIP discounts in 4 countries</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i><span class="ar">إدارة حالة طبية كاملة</span><span class="en">Full case management</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i><span class="ar">دعم على مدار الساعة</span><span class="en">24/7 support</span></li>
+                </ul>
+                <a href="#contact" class="pricing-button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="ar">أضف للسلة — 99</span><spanclass="en">AddtoCart—99</span><span class="en">Add to Cart —99</span><spanclass="en">AddtoCart—99</span>
+                </a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-icon"><i class="fa-solid fa-gift"></i></div>
+                <h3><span class="ar">البطاقة الذكية</span><span class="en">Smart Card</span></h3>
+                <p class="pricing-desc">
+                    <span class="ar">رعاية صحية في مصر — هدية لعملاء ترِيت</span>
+                    <span class="en">Egypt Healthcare — Gift for Treat Customers</span>
+                </p>
+                <div class="pricing-price">
+                    <span class="gift-tag"><span class="ar">هدية مجانية</span><span class="en">FREE GIFT</span></span>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-circle-check"></i><span class="ar">خصومات على العيادات والتحاليل</span><span class="en">Discounts on clinics & labs</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i><span class="ar">حصري لعملاء ترِيت</span><span class="en">Exclusive for Treat customers</span></li>
+                </ul>
+                <a href="#contact" class="pricing-button outline">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="ar">أضف للسلة — مجاناً</span><span class="en">Add to Cart — Free</span>
+                </a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-icon"><i class="fa-solid fa-file-signature"></i></div>
+                <h3><span class="ar">اتفاقية الرعاية</span><span class="en">Care Agreement</span></h3>
+                <p class="pricing-desc">
+                    <span class="ar">عقود رعاية صحية للأفراد والعائلات</span>
+                    <span class="en">Healthcare contracts for individuals & families</span>
+                </p>
+                <div class="agreement-options">
+                    <div class="agreement-option">
+                        <i class="fa-solid fa-user"></i>
+                        <div><small><span class="ar">فردي</span><span class="en">Individual</span></small><strong>$75</strong></div>
+                    </div>
+                    <div class="agreement-option">
+                        <i class="fa-solid fa-users"></i>
+                        <div><small><span class="ar">عائلي</span><span class="en">Family</span></small><strong>$140</strong></div>
+                    </div>
+                </div>
+                <a href="#contact" class="pricing-button outline">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="ar">أضف للسلة — 75/75 /75/140</span><span class="en">Add to Cart — 75/75 /75/140</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ TOURISM ============ -->
+<section class="section tourism-new" id="tourism">
+    <div class="container tourism-grid">
+        <div class="tourism-text reveal">
+            <span class="section-tag light"><span class="ar">السياحة العلاجية</span><span class="en">MEDICAL TOURISM</span></span>
+            <h2>
+                <span class="ar">رحلتك للعلاج… <strong>نتكفل بكل تفاصيلها</strong></span>
+                <span class="en">Your Treatment Journey… <strong>We Handle Every Detail</strong></span>
+            </h2>
+            <p>
+                <span class="ar">من التشخيص الأولي وحتى العودة لوطنك بصحة أفضل — فريقنا يدير كل شيء نيابة عنك.</span>
+                <span class="en">From initial diagnosis until you return home healthier — our team manages everything for you.</span>
+            </p>
+            <ul class="tourism-list">
+                <li><i class="fa-solid fa-circle-check"></i><span class="ar">تشخيص واختيار المستشفى المناسب</span><span class="en">Diagnosis & hospital selection</span></li>
+                <li><i class="fa-solid fa-circle-check"></i><span class="ar">التأشيرة والسفر والإقامة</span><span class="en">Visa, travel & accommodation</span></li>
+                <li><i class="fa-solid fa-circle-check"></i><span class="ar">مترجم ومُرافق طبي</span><span class="en">Translator & medical companion</span></li>
+                <li><i class="fa-solid fa-circle-check"></i><span class="ar">متابعة بعد العودة</span><span class="en">Post-return follow-up</span></li>
+            </ul>
+        </div>
+        <div class="tourism-cards">
+            <div class="tourism-card"><i class="fa-solid fa-stethoscope"></i><h4><span class="ar">تشخيص دقيق</span><span class="en">Accurate Diagnosis</span></h4></div>
+            <div class="tourism-card"><i class="fa-solid fa-hospital"></i><h4><span class="ar">مستشفيات عالمية</span><span class="en">Global Hospitals</span></h4></div>
+            <div class="tourism-card"><i class="fa-solid fa-plane-up"></i><h4><span class="ar">سفر منظّم</span><span class="en">Organized Travel</span></h4></div>
+            <div class="tourism-card"><i class="fa-solid fa-user-nurse"></i><h4><span class="ar">مرافقة كاملة</span><span class="en">Full Companion</span></h4></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ DIGITAL ============ -->
+<section class="section" id="digital">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag"><span class="ar">الحلول الرقمية</span><span class="en">DIGITAL SOLUTIONS</span></span>
+            <h2><span class="ar">صحتك… <strong>بين يديك رقمياً</strong></span><span class="en">Your Health… <strong>Digitally in Your Hands</strong></span></h2>
+        </div>
+        <div class="digital-grid">
+            <div class="digital-card">
+                <i class="fa-solid fa-video"></i>
+                <h3><span class="ar">استشارات عن بُعد</span><span class="en">Telemedicine</span></h3>
+                <p><span class="ar">تحدث مع أفضل الأطباء من أي مكان في العالم.</span><span class="en">Consult top doctors from anywhere in the world.</span></p>
+            </div>
+            <div class="digital-card">
+                <i class="fa-solid fa-folder-open"></i>
+                <h3><span class="ar">سجل طبي رقمي</span><span class="en">Digital Health Record</span></h3>
+                <p><span class="ar">كل تقاريرك وتحاليلك في مكان واحد آمن.</span><span class="en">All your reports in one secure place.</span></p>
+            </div>
+            <div class="digital-card">
+                <i class="fa-solid fa-bell"></i>
+                <h3><span class="ar">متابعة ذكية</span><span class="en">Smart Follow-Up</span></h3>
+                <p><span class="ar">تذكير بالمواعيد والأدوية وتتبع خطط العلاج.</span><span class="en">Appointment reminders & treatment tracking.</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="partners-new" id="partners">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag"><span class="ar">شركاؤنا</span><span class="en">OUR PARTNERS</span></span>
+            <h2><span class="ar">شبكة <strong>شركاء موثوقين</strong></span><span class="en">A Network of <strong>Trusted Partners</strong></span></h2>
+        </div>
+    </div>
+    <div class="partners-marquee">
+        <div class="partners-track">
+            {% for logo, name in partners %}
+            <div class="partner-logo" title="{{ name }}">
+                <img src="{{ url_for('static', filename='images/partners/' + logo) }}" alt="{{ name }}" loading="lazy"
+                     onerror="this.parentElement.classList.add('logo-missing')">
+                <span>{{ name }}</span>
+           
+
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact-new" id="contact">
+    <div class="container contact-grid">
+        <div class="contact-info reveal">
+            <span class="section-tag light"><span class="ar">تواصل معنا</span><span class="en">CONTACT US</span></span>
+            <h2><span class="ar">نحن هنا <strong>لخدمتك</strong></span><span class="en">We're Here <strong>For You</strong></span></h2>
+            <p>
+                <span class="ar">فريقنا جاهز للإجابة على استفساراتك ومرافقتك في رحلتك العلاجية.</span>
+                <span class="en">Our team is ready to answer your questions and accompany your treatment journey.</span>
+            </p>
+
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div><small><span class="ar">البريد الإلكتروني</span><span class="en">Email</span></small><a href="mailto:treatbridge1@gmail.com">treatbridge1@gmail.com</a></div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <div><small><span class="ar">الهاتف / واتساب</span><span class="en">Phone / WhatsApp</span></small><a href="tel:+201000000000">+20 100 000 0000</a></div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div><small><span class="ar">المقر الرئيسي</span><span class="en">Head Office</span></small><span class="ar">القاهرة، مصر</span><span class="en">Cairo, Egypt</span></div>
+                </div>
+            </div>
+
+            <div class="contact-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <form id="contactForm" class="contact-form-new reveal" novalidate>
+            <div class="form-row">
+                <input type="text" name="name" required
+                       data-ar-placeholder="الاسم الكامل"
+                       data-en-placeholder="Full Name">
+                <input type="email" name="email" required
+                       data-ar-placeholder="البريد الإلكتروني"
+                       data-en-placeholder="Email Address">
+            </div>
+            <input type="text" name="subject" required
+                   data-ar-placeholder="موضوع الرسالة"
+                   data-en-placeholder="Subject">
+            <textarea name="message" rows="5" required
+                      data-ar-placeholder="اكتب رسالتك هنا..."
+                      data-en-placeholder="Write your message here..."></textarea>
+
+            <button type="submit" id="submitBtn" class="submit-button">
+                <span class="ar">إرسال الرسالة</span><span class="en">Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <div id="formStatus" class="form-status" style="display:none;"></div>
+        </form>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-new">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <div class="footer-logo-new">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Treat Logo" onerror="this.remove()">
+                <i class="fa-solid fa-heart-pulse footer-logo-fallback"></i>
+            </div>
+            <p>
+                <span class="ar">منصة متكاملة للسياحة العلاجية والحلول الرقمية الصحية — رعايتك بلا حدود.</span>
+                <span class="en">An integrated platform for medical tourism and digital health — your care without borders.</span>
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4><span class="ar">روابط سريعة</span><span class="en">Quick Links</span></h4>
+            <a href="#about"><span class="ar">من نحن</span><span class="en">About Us</span></a>
+            <a href="#solutions"><span class="ar">خدماتنا</span><span class="en">Services</span></a>
+            <a href="#pricing"><span class="ar">البطاقات والخطط</span><span class="en">Cards & Plans</span></a>
+            <a href="#partners"><span class="ar">شركاؤنا</span><span class="en">Partners</span></a>
+        </div>
+
+        <div class="footer-links">
+            <h4><span class="ar">خدماتنا</span><span class="en">Our Services</span></h4>
+            <a href="#tourism"><span class="ar">السياحة العلاجية</span><span class="en">Medical Tourism</span></a>
+            <a href="#digital"><span class="ar">الحلول الرقمية</span><span class="en">Digital Solutions</span></a>
+            <a href="#network"><span class="ar">شبكتنا العالمية</span><span class="en">Global Network</span></a>
+            <a href="#contact"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></a>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4><span class="ar">ابقَ على تواصل</span><span class="en">Stay Connected</span></h4>
+            <p><span class="ar">اشترك ليصلك جديد خدماتنا وعروضنا.</span><span class="en">Subscribe for our latest services & offers.</span></p>
+            <div class="newsletter-box">
+                <input type="email" data-ar-placeholder="بريدك الإلكتروني" data-en-placeholder="Your email">
+                <button aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 Treat International. <span class="ar">جميع الحقوق محفوظة.</span><span class="en">All rights reserved.</span></p>
+        </div>
+    </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
