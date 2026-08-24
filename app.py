@@ -28,7 +28,6 @@ partners_list = [
     ("meeting-stores.png", "Meeting Stores"),
     ("extrene.png",        "Extrene"),
     ("metra.png",          "Metra Lab"),
-    ("ataya.png",          "عطايا"),
     ("nour-el-ouyoun.png", "نور العيون"),
     ("george-halim.png",   "Dr. George Halim"),
 ]
